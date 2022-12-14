@@ -1,4 +1,4 @@
-const numbers = document.querySelectorAll(".num");
+const numbers = document.querySelectorAll('.num');
 const result = document.querySelector('.result span');
 const signs = document.querySelectorAll('.sign');
 const equals = document.querySelector('.equals');
@@ -42,7 +42,7 @@ function getSecondValue(el) {
 }
 
 function getSign() {
-    for(let i = 0; i < signs.lenght; i++) {
+    for(let i = 0; i < signs.length; i++) {
         signs[i].addEventListener('click', (e) => {
             sign = e.target.getAttribute('value');
             isFirstValue = true;
@@ -63,5 +63,55 @@ equals. addEventListener('click', () => {
     }
     result.innerHTML = resultValue;
     firstValue = resultValue;
-    secondValue = ""
+    secondValue = "";
+
+    checkResultLength();
+})
+
+function checkResultLength() {
+    resultValue = JSON.stringify(resultValue);
+
+    if(resultValue.length >= 8) {
+        resultValue = JSON.parse(resultValue);
+        result.innerHTML = resultValue.toFixed(5);
+    }
+}
+
+negative.addEventListener('click', () => {
+    result.innerHTML = "";
+    if(firstValue != "") {
+        resultValue = -firstValue;
+        firstValue = resultValue;
+    }
+
+    if(firstValue != "" && secondValue != "" && sign != "") {
+        resultValue = -resultValue;
+    }
+
+    result.innerHTML = resultValue;
+})
+
+percent.addEventListener('click', () => {
+    result.innerHTML = "";
+    if(firstValue != "") {
+        resultValue = firstValue / 100;
+        firstValue = resultValue;
+    }
+
+    if(firstValue != "" && secondValue != "" && sign != "") {
+        resultValue = resultValue / 100;
+    }
+
+    result.innerHTML = resultValue;
+})
+
+clear.addEventListener('click', () => {
+    result.innerHTML = 0;
+
+    firstValue = "";
+    isFirstValue = false;
+    secondValue = "";
+    isSecondValue = false;
+    sign = "";
+    resultValue = 0;
 })
