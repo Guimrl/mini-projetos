@@ -11,8 +11,13 @@ html, body #fullheight {
 }
 
 .container {
-    height: 100%;
     background-color: black;
+    width: 400px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
 
 .result {
@@ -25,7 +30,7 @@ html, body #fullheight {
 
 .result span {
     margin-right: 60px;
-    font-size: 210px;
+    font-size: 30px;
     justify-self: flex-end;
 }
 
@@ -41,12 +46,12 @@ html, body #fullheight {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 100px;
+    font-size: 30px;
     color: white;
     border-radius: 100%;
-    width: 210px;
-    height: 210px;
-    padding: 10px;
+    width: 80px;
+    height: 80px;
+    padding: 5px;
     cursor: pointer;
     align-self: center;
     justify-self: center;
@@ -78,8 +83,14 @@ html, body #fullheight {
 
 .itemZero {
     background-color: #343434;
-    width: 435px;
+    width: 160px;
     border-radius: 135px;
     grid-column: span 2;
     border: none;
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
+    }
 }
