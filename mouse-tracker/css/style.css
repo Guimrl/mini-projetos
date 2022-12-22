@@ -1,0 +1,14 @@
+body{
+    background-image: url("../img/space.png");
+    text-align: center;
+}
+
+#duck{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 70px;
+    width: 70px;
+    transform: translate(-50%, -50%);
+    transition: 0;
+}
