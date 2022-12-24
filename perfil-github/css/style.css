@@ -20,3 +20,36 @@ body {
     border-radius: 10px;
     padding: 1rem;
 }
+
+.card {
+    max-width: 800px;
+    background-color: #4C2885;
+    border-radius: 20px;
+    display: flex;
+    padding: 3rem;
+    margin: 0;
+}
+
+.img {
+    border-radius: 50%;
+    border: 10px solid red;
+    height: 150px;
+    width: 150px;
+}
+
+.info-usuario {
+    color: #FFF;
+    margin-left: 2rem;
+}
+
+.info-usuario ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    max-width: 400px;
+}
+
+.info-usuario ul li{
+    display: flex;
+    align-items: center;
+}
