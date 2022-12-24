@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2A2A72;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.user-form input {
+    width: 100%;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+}
