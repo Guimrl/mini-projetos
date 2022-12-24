@@ -8,9 +8,18 @@ body {
     background-color: #2A2A72;
     color: #FFF;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+.user-form {
+    width: 100%;
+    max-width: 600px;
 }
 
 .user-form input {
@@ -19,6 +28,9 @@ body {
     border: none;
     border-radius: 10px;
     padding: 1rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+    font-size: 1rem;
 }
 
 .card {
@@ -52,4 +64,15 @@ body {
 .info-usuario ul li{
     display: flex;
     align-items: center;
+}
+
+.repositorio {
+    text-decoration: none;
+    color: #FFF;
+    background-color: #212A72;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
 }
