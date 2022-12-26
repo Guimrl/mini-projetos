@@ -15,6 +15,7 @@ body {
     --main-color: #e9eded;
     --text-color: #25282A;
     --hover-color: #FF4646;
+    --bg-scrollbar-color: #8c8c8c39; 
 }
 
 #conteudo {
@@ -70,4 +71,16 @@ body {
 #btn:hover::after {
     transform: scale(1, 1);
     transform-origin: top left;
+}
+
+::-webkit-scrollbar {
+    width: 0.938rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-scrollbar-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--hover-color);
 }
