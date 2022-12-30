@@ -19,12 +19,30 @@ function addNovaNota(txt = '') {
     const main = nota.querySelector('.main')
     const textArea = nota.querySelector('textarea');
 
+    textArea.value = txt;
+    main.innerHTML = marked(txt);
+
+    //Editar
+
+    //Excluir
+
+    //Pega o valor da textArea
     textArea.addEventListener('input', (e) => {
         const { value } = e.target;
 
         main.innerHTML = marked(value);
 
+        atualizar();
 
+        //armazena em localStorage?
     })
+
     document.body.appendChild(nota);
+}
+
+function atualizar() {
+    const notasTxt = document.querySelectorAll('textarea');
+    const notas = [];
+
+    notasTxt.forEach(nota => notas.push(nota.value));
 }
