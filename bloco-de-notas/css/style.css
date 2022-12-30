@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+}
+
+body {
+    font-family: 'Helvetica', serif;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+}
+
+.add {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    color: #FFF;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.add:active {
+    transform: scale(0.98);
+}
+
+.nota {
+    background-color: #FFF;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+    margin: 30px 20px;
+    height: 400px;
+    width: 400px;
+    overflow-y: scroll;
+}
+
+.hidden {
+    display: none;
+}
+
+.main {
+    padding: 20px;
+}
