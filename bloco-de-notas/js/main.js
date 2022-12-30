@@ -23,8 +23,16 @@ function addNovaNota(txt = '') {
     main.innerHTML = marked(txt);
 
     //Editar
+    editarBtn.addEventListener('click', () => {
+        main.classList.toggle('hidden');
+        textArea.classList.toggle('hidden');
+    })
 
     //Excluir
+    excluirBtn.addEventListener('click', () => {
+        nota.remove();
+        atualizar();
+    })
 
     //Pega o valor da textArea
     textArea.addEventListener('input', (e) => {
