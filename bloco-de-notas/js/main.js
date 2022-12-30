@@ -1,4 +1,9 @@
 const addBtn = document.getElementById('add');
+const notas = JSON.parse(localStorage.getItem('notas'));
+
+if(notas) {
+    notas.forEach(nota => addNovaNota(nota));
+}
 
 addBtn.addEventListener('click', () => addNovaNota());
 
@@ -6,9 +11,9 @@ function addNovaNota(txt = '') {
     const nota = document.createElement('div');
 
     nota.innerHTML = `
-    <div>
+    <div class='opcoes'>
         <button class="editar">Editar</button>
-        <button class="excluir">Excluir</button>
+        <button class="excluir">Ecluir</button>
     </div>
     <div class="main ${txt ? "" : "hidden"}"></div>
     <textarea class="${txt ? "hidden" : ""}"></textarea>
@@ -41,8 +46,6 @@ function addNovaNota(txt = '') {
         main.innerHTML = marked(value);
 
         atualizar();
-
-        //armazena em localStorage?
     })
 
     document.body.appendChild(nota);
@@ -53,4 +56,7 @@ function atualizar() {
     const notas = [];
 
     notasTxt.forEach(nota => notas.push(nota.value));
+
+    //armazena em localStorage
+    localStorage.setItem('notas', JSON.stringify(notas));
 }
