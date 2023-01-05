@@ -28,45 +28,6 @@ body {
     color: var(--text-color);
 }
 
-#btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 10rem;
-    background-color: var(--hover-color);
-    color: var(--main-color);
-    font-family: 'Helvetica';
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 0.15rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    margin-top: 1rem;
-}
-
-#btn:hover {
-    color: var(--text-color);
-}
-
-#btn::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background: var(--main-color);
-    z-index: -1;
-    border-radius: 10rem;
-    transform: 0.3s ease all;
-    transform: scale(0, 1);
-    transform-origin: top right;
-    transition: transform 500ms cubic-bezier(0.86, 0, 0.07, 1);
-    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-}
 .btn {
     display: inline-block;
     padding: 1rem 2rem;
@@ -108,11 +69,6 @@ body {
 }
 
 .btn:hover::after {
-    transform: scale(1, 1);
-    transform-origin: top left;
-}
-
-#btn:hover::after {
     transform: scale(1, 1);
     transform-origin: top left;
 }
