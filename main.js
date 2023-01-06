@@ -2,7 +2,7 @@
 const projetos = [
     {
         title: "parallax",
-        url: "https://guimrl.github.io/mini-projetos/parallax-bg/"
+        url: "https://guimrl.github.io/mini-projetos/parallax/"
     },
     {
         title: "Perfil Github",
