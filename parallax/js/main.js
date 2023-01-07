@@ -1,5 +1,17 @@
 
 //Parallax2
+const scroll = (event) => {
+    const scrollPosition = event.target.scrollingElement.scrollTop;
+    const imagem = document.querySelectorAll("img");
+
+    imagem.forEach((element) => {
+        element.style.transform = `translate(0, ${scrollPosition / 10}px)`;
+    });
+}
+
+window.addEventListener("scroll", scroll);
+
+//Parallax3
 const cardWidth = 500,
     degIncrement = 6,
     card = document.getElementById("card");

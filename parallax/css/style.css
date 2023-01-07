@@ -14,10 +14,56 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-color: #4169E1;;
 }
 
-/* section 2 */
+img {
+    position: fixed;
+    z-index: 0;
+    transition: 0.3s;
+}
+
+body img:nth-child(1) {
+    width: 200px;
+    top: 0;
+}
+
+body img:nth-child(2) {
+    width: 400px;
+    left: 900px;
+    top: 0;
+}
+
+body img:nth-child(3) {
+    width: 200px;
+    bottom: 0;
+}
+
+body img:nth-child(4) {
+    width: 200px;
+    left: 600px;
+    bottom: 0;
+}
+
+body img:nth-child(5) {
+    width: 200px;
+    left: 250px;
+    top: 250px;
+}
+
+.parallax2-content {
+    position: relative;
+    z-index: 1;
+    padding: 100px 15%;
+}
+
 .parallax2 {
+    height: 200vh;
+    background-color: #4169E1;
+}
+
+/* section 3 */
+.parallax3 {
     height: 100vh;
     display: grid;
     place-items: center;
