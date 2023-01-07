@@ -1,5 +1,26 @@
+// Parallax1
+const h1 = document.querySelector("h1"),
+  banner = document.getElementById("banner")
 
-//Parallax2
+const usarOScroll = (event) => {
+  const posicaoScroll = event.target.scrollingElement.scrollTop;
+  if (posicaoScroll > 100) {
+    banner.style.backgroundSize = "190%";
+    h1.style.opacity = 0;
+    h1.style.translate = "0 -50px";
+    h1.style.scale = "0.9";
+  } else {
+    banner.style.backgroundSize = "150%";
+    h1.style.opacity = 1;
+    h1.style.translate = 0;
+    h1.style.scale = 1;
+  }
+};
+
+document.addEventListener("scroll", usarOScroll);
+
+
+//Parallax3
 const scroll = (event) => {
     const scrollPosition = event.target.scrollingElement.scrollTop;
     const imagem = document.querySelectorAll("img");
@@ -11,7 +32,7 @@ const scroll = (event) => {
 
 window.addEventListener("scroll", scroll);
 
-//Parallax3
+//Parallax4
 const cardWidth = 500,
     degIncrement = 6,
     card = document.getElementById("card");
