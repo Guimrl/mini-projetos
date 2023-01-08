@@ -23,6 +23,10 @@ const projetos = [
     {
         title: "Bloco de Notas",
         url: "https://guimrl.github.io/mini-projetos/bloco-de-notas/"
+    },
+    {
+        title: "Lista de Tarefas",
+        url: "https://guimrl.github.io/mini-projetos/lista-de-tarefas/"
     }
     
 ];
