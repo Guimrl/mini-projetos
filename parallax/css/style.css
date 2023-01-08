@@ -26,6 +26,7 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.5s;
+  z-index: 1;
 }
 
 .banner h1 {
@@ -45,22 +46,24 @@ h2 {
   margin: 1em;
 }
 
-/* Section 2 */
+/* Section 3 */
 .parallax2 {
     background: url("https://user-images.githubusercontent.com/88007295/211163939-ffd88276-17bb-4185-94c9-28e7ef9f8575.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: #4169E1;;
+    background-color: #4169E1;
+    z-index: 2;
 }
 
-/* Section 3 */
+/* Section 2 */
 
 img {
     position: fixed;
     z-index: 0;
     transition: 0.3s;
+    z-index: 0;
 }
 
 body img:nth-child(1) {
@@ -72,6 +75,7 @@ body img:nth-child(2) {
     width: 400px;
     left: 900px;
     top: 0;
+    z-index: 0;
 }
 
 body img:nth-child(3) {
@@ -91,17 +95,6 @@ body img:nth-child(5) {
     top: 250px;
 }
 
-.parallax3-content {
-    position: relative;
-    z-index: 1;
-    padding: 100px 15%;
-}
-
-.parallax3 {
-    height: 200vh;
-    background-color: #4169E1;
-}
-
 /* section 4 */
 .parallax4 {
     height: 100vh;
@@ -111,6 +104,7 @@ body img:nth-child(5) {
     margin: 0;
     padding: 0;
     background-color: #4169E1;
+    z-index: 1;
 }
 
 .card {
