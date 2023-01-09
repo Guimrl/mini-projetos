@@ -10,18 +10,30 @@ form.addEventListener('submit', (evento) => {
 function addTarefa(tarefa) {
     let campoTarefa = input.value;
 
+    if(tarefa) {
+        campoTarefa = tarefa.texto;
+    }
+
     if(campoTarefa) {
         const tarefaEl = document.createElement('li');
-        
-        if(tarefa) {
-            campoTarefa = tarefa.texto;
-        }
         
         if(tarefa && tarefa.concluida) {
             tarefaEl.classList.add('concluida');
         }
 
         tarefaEl.innerHTML = campoTarefa;
+
+        tarefaEl.addEventListener('click', () => {
+            tarefaEl.classList.toggle('concluida');
+            atualizar();
+        })
+
+        tarefaEl.addEventListener('contextmenu', (evento) => {
+            evento.preventDefault();
+
+            tarefaEl.remove();
+            atualizar();
+        })
 
         listaDeTarefas.appendChild(tarefaEl);
 
