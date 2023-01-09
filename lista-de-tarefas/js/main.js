@@ -2,6 +2,12 @@ const form = document.getElementById('form');
 const listaDeTarefas = document.getElementById('todos');
 const input = document.getElementById('input');
 
+const tarefas = JSON.parse(localStorage.getItem('todos'));
+
+if(tarefas) {
+    tarefas.forEach(tarefa => addTarefa(tarefa));
+}
+
 form.addEventListener('submit', (evento) => {
     evento.preventDefault();
     addTarefa();
@@ -55,4 +61,6 @@ function atualizar() {
             concluida: tarefaEl.classList.contains('concluida')
         })
     })
+    
+    localStorage.setItem('todos', JSON.stringify(tarefas));
 }
