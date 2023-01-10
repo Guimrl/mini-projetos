@@ -1,62 +1,49 @@
 const addBtn = document.getElementById('add');
-const notas = JSON.parse(localStorage.getItem('notas'));
+const conteudo = document.getElementById('conteudo');
+const notas = localStorage.getItem("notas") ? JSON.parse(localStorage.getItem("notas")) : [];
 
-if(notas) {
-    notas.forEach(nota => addNovaNota(nota));
+
+addBtn.addEventListener('click', () => {
+    novaNota();
+    eventos();
+});
+
+const cores = [
+    "#845EC2",
+    "#008F7A",
+    "#008E9B",
+    "#FFC75F",
+    "#FF8066",
+    "#BA3CAF"
+];
+
+const corAleatoria = () => cores[Math.floor(Math.random() * cores.length)];
+
+function carregaBancoDeDados() {
+    conteudo.innerHTML = "";
+    verificaNulls();
+
+    notas.forEach((item, i) => {
+        novaNota(item, i);
+    });
+
+    eventos();
 }
 
-addBtn.addEventListener('click', () => addNovaNota());
+function novaNota(item) {
+    const div = document.createElement('div');
 
-function addNovaNota(txt = '') {
-    const nota = document.createElement('div');
+    div.innerHTML = `<div class="item" style="background-color: ${item?.color || corAleatoria()}">
+    <span class="remove">x</span>
+    <textarea>${item?.text || ""}</textarea>
+    </div>`
 
-    nota.innerHTML = `
-    <div class='opcoes'>
-        <button class="editar">Editar</button>
-        <button class="excluir">Ecluir</button>
-    </div>
-    <div class="main ${txt ? "" : "hidden"}"></div>
-    <textarea class="${txt ? "hidden" : ""}"></textarea>
-    `
-    
-    const editarBtn = nota.querySelector('.editar');
-    const excluirBtn = nota.querySelector('.excluir');
-    const main = nota.querySelector('.main')
-    const textArea = nota.querySelector('textarea');
-
-    textArea.value = txt;
-    main.innerHTML = marked(txt);
-
-    //Editar
-    editarBtn.addEventListener('click', () => {
-        main.classList.toggle('hidden');
-        textArea.classList.toggle('hidden');
-    })
-
-    //Excluir
-    excluirBtn.addEventListener('click', () => {
-        nota.remove();
-        atualizar();
-    })
-
-    //Pega o valor da textArea
-    textArea.addEventListener('input', (e) => {
-        const { value } = e.target;
-
-        main.innerHTML = marked(value);
-
-        atualizar();
-    })
-
-    document.body.appendChild(nota);
+    conteudo.appendChild(div);
 }
 
-function atualizar() {
-    const notasTxt = document.querySelectorAll('textarea');
-    const notas = [];
-
-    notasTxt.forEach(nota => notas.push(nota.value));
-
-    //armazena em localStorage
+function verificaNulls() {
+    notas = notas.filter((item) => item);
     localStorage.setItem('notas', JSON.stringify(notas));
 }
+
+carregaBancoDeDados();
