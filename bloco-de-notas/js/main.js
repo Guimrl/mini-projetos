@@ -1,12 +1,11 @@
-const addBtn = document.getElementById('add');
-const conteudo = document.getElementById('conteudo');
-const notas = localStorage.getItem("notas") ? JSON.parse(localStorage.getItem("notas")) : [];
+const addBtn = document.querySelector("#add");
+const conteudo = document.querySelector("#conteudo");
+const notas_db = localStorage.getItem("notas_db") ? JSON.parse(localStorage.getItem("notas_db")) : [];
 
-
-addBtn.addEventListener('click', () => {
+addBtn.onclick = () => {
     novaNota();
     eventos();
-});
+}
 
 const cores = [
     "#845EC2",
@@ -14,7 +13,7 @@ const cores = [
     "#008E9B",
     "#FFC75F",
     "#FF8066",
-    "#BA3CAF"
+    "#BA3CAF",
 ];
 
 const corAleatoria = () => cores[Math.floor(Math.random() * cores.length)];
@@ -23,7 +22,7 @@ function carregaBancoDeDados() {
     conteudo.innerHTML = "";
     verificaNulls();
 
-    notas.forEach((item, i) => {
+    notas_db.forEach((item, i) => {
         novaNota(item, i);
     });
 
@@ -31,12 +30,13 @@ function carregaBancoDeDados() {
 }
 
 function novaNota(item) {
-    const div = document.createElement('div');
+    const div = document.createElement("div");
 
-    div.innerHTML = `<div class="item" style="background-color: ${item?.cores || corAleatoria()}">
-    <span class="remove">x</span>
+    div.innerHTML = `<div class="item" style="background-color: ${item?.cor || corAleatoria()
+        }">
+    <span class="remove">X</span>
     <textarea>${item?.text || ""}</textarea>
-    </div>`
+  </div>`;
 
     conteudo.appendChild(div);
 }
@@ -47,30 +47,30 @@ function eventos() {
 
     novaNota.forEach((item, i) => {
         item.oninput = () => {
-            notas[i] = {
-                text: item.ariaValueMax,
-                color: notas[i]?.cores || item.parentElement.style.backgroundColor
-            }
+            notas_db[i] = {
+                text: item.value,
+                cor: notas_db[i]?.cor || item.parentElement.style.backgroundColor,
+            };
 
-            localStorage.setItem("notas", JSON.stringify(notas));
-        }
+            localStorage.setItem("notas_db", JSON.stringify(notas_db));
+        };
     });
 
     remove.forEach((item, i) => {
         item.onclick = () => {
             conteudo.children[i].remove();
-            if(notas[i]) {
-                notas.splice(i, 1);
-                localStorage.setItem("notas", JSON.stringify(notas));
+            if (notas_db[i]) {
+                notas_db.splice(i, 1);
+                localStorage.setItem("notas_db", JSON.stringify(notas_db));
             }
             eventos();
-        }
-    })
+        };
+    });
 }
 
 function verificaNulls() {
-    notas = notas.filter((item) => item);
-    localStorage.setItem('notas', JSON.stringify(notas));
+    notas_db = notas_db.filter((item) => item);
+    localStorage.setItem("notas_db", JSON.stringify(notas_db));
 }
 
 carregaBancoDeDados();
