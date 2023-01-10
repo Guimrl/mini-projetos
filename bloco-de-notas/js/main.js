@@ -1,6 +1,6 @@
 const addBtn = document.querySelector("#add");
 const conteudo = document.querySelector("#conteudo");
-const notas_db = localStorage.getItem("notas_db") ? JSON.parse(localStorage.getItem("notas_db")) : [];
+let notas_db = localStorage.getItem("notas_db") ? JSON.parse(localStorage.getItem("notas_db")) : [];
 
 addBtn.onclick = () => {
     novaNota();
