@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+main,
+.conteudo {
+    display: flex;
+}
+
+body {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7F7F7;
+}
+
+main {
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 5px;
+    width: 220px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    outline: 0;
+}
+
+.conteudo {
+    flex-direction: column;
+    align-items: center;
+}
