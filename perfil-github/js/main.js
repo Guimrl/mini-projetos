@@ -82,7 +82,6 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
 
     const user = pesquisar.value;
-
     if(user) {
         getUser(user);
 

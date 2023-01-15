@@ -4,7 +4,7 @@ const input = document.getElementById('input');
 
 const tarefas = JSON.parse(localStorage.getItem('todos'));
 
-if(tarefas) {
+if (tarefas) {
     tarefas.forEach(tarefa => addTarefa(tarefa));
 }
 
@@ -16,14 +16,14 @@ form.addEventListener('submit', (evento) => {
 function addTarefa(tarefa) {
     let campoTarefa = input.value;
 
-    if(tarefa) {
+    if (tarefa) {
         campoTarefa = tarefa.texto;
     }
 
-    if(campoTarefa) {
+    if (campoTarefa) {
         const tarefaEl = document.createElement('li');
-        
-        if(tarefa && tarefa.concluida) {
+
+        if (tarefa && tarefa.concluida) {
             tarefaEl.classList.add('concluida');
         }
 

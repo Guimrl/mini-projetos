@@ -27,6 +27,10 @@ const projetos = [
     {
         title: "Lista de Tarefas",
         url: "https://guimrl.github.io/mini-projetos/lista-de-tarefas/"
+    },
+    {
+        title: "Gerador QR Code",
+        url: "https://guimrl.github.io/mini-projetos/gerador-qrcode/"
     }
-    
+
 ];

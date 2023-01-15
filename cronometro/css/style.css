@@ -21,10 +21,10 @@ body {
 
 h2,
 h3 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 2.6em;
-  text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 2.6em;
+    text-transform: uppercase;
 }
 
 #segundos,

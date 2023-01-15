@@ -1,6 +1,3 @@
-
-
-
 for (let i = 0; i < projetos.length; i++) {
     let section = document.querySelector('#conteudo');
     let tag = document.createElement("a");

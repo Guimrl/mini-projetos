@@ -32,15 +32,15 @@ window.onload = () => {
     function contagem() {
         milesimos++;
 
-        if(milesimos <= 9) {
+        if (milesimos <= 9) {
             adicionaMilesimos.innerHTML = "0" + milesimos;
         }
 
-        if(milesimos > 9) {
+        if (milesimos > 9) {
             adicionaMilesimos.innerHTML = milesimos;
         }
 
-        if(milesimos > 99) {
+        if (milesimos > 99) {
             console.log("segundos");
             segundos++;
 
@@ -51,7 +51,7 @@ window.onload = () => {
             adicionaMilesimos.innerHTML = "0" + 0;
         }
 
-        if(segundos > 9) {
+        if (segundos > 9) {
             adicionaSegundos.innerHTML = segundos;
         }
     }

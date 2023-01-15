@@ -1,20 +1,20 @@
 // Parallax1
 const h1 = document.querySelector("h1"),
-  banner = document.getElementById("banner")
+    banner = document.getElementById("banner")
 
 const usarOScroll = (event) => {
-  const posicaoScroll = event.target.scrollingElement.scrollTop;
-  if (posicaoScroll > 100) {
-    banner.style.backgroundSize = "190%";
-    h1.style.opacity = 0;
-    h1.style.translate = "0 -50px";
-    h1.style.scale = "0.9";
-  } else {
-    banner.style.backgroundSize = "150%";
-    h1.style.opacity = 1;
-    h1.style.translate = 0;
-    h1.style.scale = 1;
-  }
+    const posicaoScroll = event.target.scrollingElement.scrollTop;
+    if (posicaoScroll > 100) {
+        banner.style.backgroundSize = "190%";
+        h1.style.opacity = 0;
+        h1.style.translate = "0 -50px";
+        h1.style.scale = "0.9";
+    } else {
+        banner.style.backgroundSize = "150%";
+        h1.style.opacity = 1;
+        h1.style.translate = 0;
+        h1.style.scale = 1;
+    }
 };
 
 document.addEventListener("scroll", usarOScroll);
