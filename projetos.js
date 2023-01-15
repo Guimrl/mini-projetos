@@ -1,36 +1,37 @@
 
+const urlPadrao = "https://guimrl.github.io/mini-projetos/";
 const projetos = [
     {
         title: "parallax",
-        url: "https://guimrl.github.io/mini-projetos/parallax/"
+        url: `${urlPadrao}parallax`
     },
     {
         title: "Perfil Github",
-        url: "https://guimrl.github.io/mini-projetos/perfil-github/"
+        url: `${urlPadrao}perfil-github/`
     },
     {
         title: "Cronômetro",
-        url: "https://guimrl.github.io/mini-projetos/cronometro/"
+        url: `${urlPadrao}cronometro`
     },
     {
         title: "Calculadora",
-        url: "https://guimrl.github.io/mini-projetos/calculadora/"
+        url: `${urlPadrao}calculadora`
     },
     {
         title: "Mouse Tracker",
-        url: "https://guimrl.github.io/mini-projetos/mouse-tracker/"
+        url: `${urlPadrao}mouse-tracker`
     },
     {
         title: "Bloco de Notas",
-        url: "https://guimrl.github.io/mini-projetos/bloco-de-notas/"
+        url: `${urlPadrao}bloco-de-notas`
     },
     {
         title: "Lista de Tarefas",
-        url: "https://guimrl.github.io/mini-projetos/lista-de-tarefas/"
+        url: `${urlPadrao}lista-de-tarefas`
     },
     {
         title: "Gerador QR Code",
-        url: "https://guimrl.github.io/mini-projetos/gerador-qrcode/"
+        url: `${urlPadrao}gerador-qrcode`
     }
 
 ];
