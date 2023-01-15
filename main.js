@@ -1,7 +1,8 @@
 for (let i = 0; i < projetos.length; i++) {
     let section = document.querySelector('#conteudo');
     let tag = document.createElement("a");
-    tag.href = projetos[i].url;
+    let urlPadrao = "https://guimrl.github.io/mini-projetos/";
+    tag.href = urlPadrao + projetos[i].url;
     tag.classList.add("btn");
     tag.textContent = projetos[i].title;
     tag.target = "_blank";
