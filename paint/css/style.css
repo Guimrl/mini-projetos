@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navBar {
+    max-width: auto;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #CCC;
+    padding: 10px;
+}
+
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+
+.navBar div, button, input {
+    margin: 5px;
+}
+
+input:hover,
+button:hover,
+.navBar:hover {
+    cursor: pointer;
+}
+
+.color {
+    height: 35px;
+    width: 35px;
+    border: 3px solid white;
+    transition: transform .5s;
+}
+
+.color:hover {
+    transform: scale(1.2);
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: .6em 1em;
+    border-radius: 3px;
+    background-color: #03bb56;
+    color: #fff;
+    border: 3px solid white;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.save {
+    background-color: #0f65d4;
+}
+
+input[type="color"] {
+    width: 60px;
+    height: 40px;
+}
+
+#outputId {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.color:nth-child(1) {
+    background-color: #000000;
+}
+
+.color:nth-child(2) {
+    background-color: #C0C0C0;
+}
+
+.color:nth-child(3) {
+    background-color: #808080;
+}
+
+.color:nth-child(4) {
+    background-color: #FFFFFF;
+}
+
+.color:nth-child(5) {
+    background-color: #800000;
+}
+
+.color:nth-child(6) {
+    background-color: #FF0000;
+}
+
+.color:nth-child(7) {
+    background-color: #B22222;
+}
+
+.color:nth-child(8) {
+    background-color: #FF00FF;
+}
+
+.color:nth-child(9) {
+    background-color: #008000;
+}
+
+.color:nth-child(10) {
+    background-color: #808000;
+}
+
+.color:nth-child(11) {
+    background-color: #FFFF00;
+}
+
+.color:nth-child(12) {
+    background-color: #000080;
+}
+
+.color:nth-child(13) {
+    background-color: #0000FF;
+}
+
+.color:nth-child(14) {
+    background-color: #008080;
+}
+
+.color:nth-child(15) {
+    background-color: #00FFFF;
+}
