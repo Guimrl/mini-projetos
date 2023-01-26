@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="navBar">
+        <div class="color" data-color="#000"></div>
+        <div class="color" data-color="red"></div>
+        <div class="color" data-color="orange"></div>
+        <div class="color" data-color="blue"></div>
+        <div class="color" data-color="purple"></div>
+        <div class="color" data-color="yellowgreen"></div>
+        <div class="color" data-color="yellow"></div>
+        <div class="color" data-color="#fff"></div>
+        <button class="clear">Clear</button>
+        <button class="save">Save</button>
+        <input type="color" id="favcolor" value="#FFFFFF">
+        <input type="range" name="inputName" id="inputId" value="5" min="1" max="10" oninput="outputId.value = onputId.value">
+        <output id="outputId">5</output>
+    </div>
+</body>
+</html>

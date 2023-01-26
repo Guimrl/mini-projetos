@@ -2,7 +2,7 @@
 const projetos = [
     {
         title: "parallax",
-        url: "parallax"
+        url: "parallax/"
     },
     {
         title: "Perfil Github",
@@ -10,27 +10,27 @@ const projetos = [
     },
     {
         title: "Cronômetro",
-        url: "cronometro"
+        url: "cronometro/"
     },
     {
         title: "Calculadora",
-        url: "calculadora"
+        url: "calculadora/"
     },
     {
         title: "Mouse Tracker",
-        url: "mouse-tracker"
+        url: "mouse-tracker/"
     },
     {
         title: "Bloco de Notas",
-        url: "bloco-de-notas"
+        url: "bloco-de-notas/"
     },
     {
         title: "Lista de Tarefas",
-        url: "lista-de-tarefas"
+        url: "lista-de-tarefas/"
     },
     {
         title: "Gerador QR Code",
-        url: "gerador-qrcode"
+        url: "gerador-qrcode/"
     }
 
 ];
