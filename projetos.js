@@ -31,6 +31,10 @@ const projetos = [
     {
         title: "Gerador QR Code",
         url: "gerador-qrcode/"
+    },
+    {
+        title: "Paint",
+        url: "paint/"
     }
 
 ];
