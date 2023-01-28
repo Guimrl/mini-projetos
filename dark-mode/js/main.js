@@ -22,11 +22,11 @@ input.addEventListener('change', () => {
         getTheme = 'DARK';
         changeTheme(darkTheme);
     } else {
-        getTheme = 'LIGHT'; 
+        getTheme = 'LIGHT';
         changeTheme(lightTheme);
     }
 
-    localStorage.setItem("PageTheme", JSON.stringify(getTheme));
+    localStorage.setItem("pageTheme", JSON.stringify(getTheme));
 })
 
 function changeTheme(theme) {
@@ -43,4 +43,4 @@ let getTheme = JSON.parse(localStorage.getItem("pageTheme"));
 
 if (getTheme === 'DARK') {
     changeTheme(darkTheme);
-} 
+}

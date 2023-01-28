@@ -27,12 +27,8 @@ input {
     --fix-color: #333333;
 }
 
-#dark-mode-theme {
-    border: 1px solid red;
-}
-
 .dark-mode {
-    border: 1px solid blue;
+    border: 1px solid var(--main-color);
     background-color: var(--bg-color);
     border-radius: 3.125em;
     cursor: pointer;
@@ -50,8 +46,8 @@ input {
     background-color: var(--main-color);
     border-radius: 50%;
     position: absolute;
-    top: 0.125em;
-    left: 0.125em;
+    top: 0.04em;
+    left: 0.05em;
     height: 1.375em;
     width: 1.375em;
 
@@ -61,12 +57,4 @@ input {
 
 .checkbox:checked+.dark-mode .ball {
     transform: translateX(24px);
-}
-
-.fa-moon {
-    color: #0b5ed7;
-}
-
-.fa-sun {
-    color: orange;
 }
