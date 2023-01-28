@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+input {
+    left: -9999px;
+    position: absolute;
+}
+
+:root {
+    --main-color: #0b5ed7;
+    --main-text-color: #333333;
+    --main-bg-color: #eeeeee;
+    --bg-color: #ffffff;
+    --fix-color: #333333;
+}
+
+#dark-mode-theme {
+    border: 1px solid red;
+}
+
+.dark-mode {
+    border: 1px solid blue;
+    background-color: var(--bg-color);
+    border-radius: 3.125em;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.313em;
+    position: relative;
+    height: 1.625em;
+    width: 3.125em;
+    transform: scale(1.5);
+}
+
+.dark-mode .ball {
+    background-color: var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 0.125em;
+    left: 0.125em;
+    height: 1.375em;
+    width: 1.375em;
+
+    transform: translateX(0px);
+    transition: transform .2s linear;
+}
+
+.checkbox:checked+.dark-mode .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: #0b5ed7;
+}
+
+.fa-sun {
+    color: orange;
+}
