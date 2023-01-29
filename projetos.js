@@ -35,6 +35,10 @@ const projetos = [
     {
         title: "Paint",
         url: "paint/"
+    },
+    {
+        title: "Dark Mode",
+        url: "dark-mode/"
     }
 
 ];
