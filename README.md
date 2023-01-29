@@ -19,6 +19,11 @@ que você viu.
 
 - Em desenvolvimento.
 
+### License
+
+- GNU GENERAL PUBLIC LICENSE v3
+
+<br>
 <hr>
 
 <div align="center">
