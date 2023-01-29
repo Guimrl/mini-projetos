@@ -1,7 +1,9 @@
 const canvas = document.getElementById("canvas");
 const body = document.querySelector('body');
+
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
+
 var corAtual = '';
 var tamLinha = 5;
 let x = null;
@@ -11,15 +13,15 @@ let draw = false;
 body.style.backgroundColor = "#FFFFFF";
 var input = document.getElementById("favcolor");
 
-input.addEventListener("input", function() {
-  corAtual = input.value;
-  body.style.backgroundColor = corAtual;
+input.addEventListener("input", function () {
+    corAtual = input.value;
+    body.style.backgroundColor = corAtual;
 }, false);
 
 const canvasContext = canvas.getContext("2d");
 canvasContext.lineWidth = tamLinha;
 
-document.getElementById("inputId").oninput = function() {
+document.getElementById("inputId").oninput = function () {
     draw = null;
     tamLinha = document.getElementById("inputId").value;;
     document.getElementById("outputId").innerHTML = tamLinha;
@@ -37,7 +39,7 @@ cores.forEach(cor => {
 let limpar = document.querySelector(".clear");
 limpar.addEventListener("click", () => {
     canvasContext.clearRect(0, 0, canvas.width, canvas.height);
-})
+});
 
 let download = document.querySelector(".save");
 download.addEventListener("click", () => {
@@ -46,24 +48,26 @@ download.addEventListener("click", () => {
     a.href = arquivo;
     a.download = "sketch.png";
     a.click();
-})
+});
 
-window.addEventListener("mousedown", (e) => draw = true);
-window.addEventListener("mouseup", (e) => draw = false);
-window.addEventListener("mousemove", (e) => {
-    if(x == null || y == null || !draw){
-        x = e.clientX;
-        y = e.clientY;
+window.addEventListener("touchstart", (e) => {
+    x = e.touches[0].clientX;
+    y = e.touches[0].clientY;
+    draw = true;
+});
+
+window.addEventListener("touchend", (e) => draw = false);
+
+window.addEventListener("touchmove", (e) => {
+    if (!draw) {
         return;
     }
-
-    let atualX = e.clientX;
-    let atualY = e.clientY;
+    let atualX = e.touches[0].clientX;
+    let atualY = e.touches[0].clientY;
     canvasContext.beginPath();
     canvasContext.moveTo(x, y);
     canvasContext.lineTo(atualX, atualY);
     canvasContext.stroke();
-
     x = atualX;
     y = atualY;
 });
