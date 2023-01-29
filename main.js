@@ -1,11 +1,12 @@
-for (let i = 0; i < projetos.length; i++) {
-    let section = document.querySelector('#conteudo');
-    let tag = document.createElement("a");
-    let urlPadrao = "https://guimrl.github.io/mini-projetos/";
-    tag.href = urlPadrao + projetos[i].url;
+const URL_PADRAO = "https://guimrl.github.io/mini-projetos/";
+const section = document.querySelector('#conteudo');
+
+projetos.forEach(projeto => {
+    const tag = document.createElement("a");
+    tag.href = `${URL_PADRAO}${projeto.url}`;
     tag.classList.add("btn");
-    tag.textContent = projetos[i].title;
+    tag.textContent = projeto.title;
     tag.target = "_blank";
 
     section.insertAdjacentElement("beforeend", tag);
-}
+});
