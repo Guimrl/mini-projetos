@@ -18,8 +18,8 @@ body {
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .main {
@@ -62,7 +62,6 @@ body {
     align-items: center;
     color: #ffff;
     font-size: 1rem;
-
 }
 
 .links ul li a i {
@@ -94,4 +93,3 @@ body {
 .links ul .github:hover {
     background: #333;
 }
-
