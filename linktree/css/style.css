@@ -11,3 +11,87 @@
 a {
     text-decoration: none;
 }
+
+body {
+    background-image: url('https://user-images.githubusercontent.com/88007295/215850523-7b6b3c15-bc36-4e70-ac4e-7c43f3edf24f.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.main {
+    width: 30em;
+    margin: 4em;
+}
+
+.info img {
+    display: block;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.info p {
+    text-align: center;
+    margin-top: 13px;
+    font-size: 1.5em;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.links ul li {
+    width: 100%;
+    margin: 1.2rem 0;
+    padding: 0.4rem 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0px);
+    border-radius: 5px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    box-shadow: 0 0 0.8rem rgba(255, 255, 255, .12);
+}
+
+.links ul li a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #ffff;
+    font-size: 1rem;
+
+}
+
+.links ul li a i {
+    text-align: center;
+    line-height: 4rem;
+    padding: 10px 20px;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+    transform: scale(1.4) translateZ(50px);
+    transition: 0.25s;
+}
+
+.links ul li a span {
+    line-height: 1.4rem;
+}
+
+.links ul .instagram:hover {
+    background: #E1306C;
+}
+
+.links ul .linkedin:hover {
+    background: #0E76A8;
+}
+
+.links ul .portfolio:hover {
+    background: #90C2BA;
+}
+
+.links ul .github:hover {
+    background: #333;
+}
+
