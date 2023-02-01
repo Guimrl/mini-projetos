@@ -8,18 +8,18 @@
     list-style: none;
 }
 
-a {
-    text-decoration: none;
-}
-
 body {
-    background-image: url('https://user-images.githubusercontent.com/88007295/215850523-7b6b3c15-bc36-4e70-ac4e-7c43f3edf24f.jpeg');
+    background-image: url('https://user-images.githubusercontent.com/88007295/216133266-f9201c2e-00f8-4215-b8ba-0e57c5387524.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
     display: flex;
     justify-content: center;
+}
+
+a {
+    text-decoration: none;
 }
 
 .main {

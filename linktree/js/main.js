@@ -30,3 +30,16 @@ function criaImagemPerfil(res) {
 }
 
 api();
+
+let arrayTitle = [
+    "LinkTree",
+    "Guilherme Amaral",
+    "Redes sociais"
+];
+
+let contador = 0;
+
+setInterval(function() {
+    document.title = arrayTitle[contador % arrayTitle.length];
+    contador++;
+}, 2000);
