@@ -8,8 +8,8 @@
     height: 100vh;
     width: 100%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: cyan;
-    background-color: #000;
+    color: #000;
+    background-color: #EEE;
     display: grid;
     place-items: center;
     font-size: 50px;
