@@ -1,4 +1,3 @@
-
 const projetos = [
     {
         title: "parallax",
@@ -42,7 +41,11 @@ const projetos = [
     },
     {
         title: "Linktree",
-        url: "linktree"
+        url: "linktree/"
+    },
+    {
+        title: "Relógio",
+        url: "relogio/"
     }
 
 ];
