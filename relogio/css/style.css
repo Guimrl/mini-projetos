@@ -1,16 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.conteudo {
+body {
+    background: url(https://user-images.githubusercontent.com/88007295/218283744-228cac7f-976f-4bd4-a90d-b15c6ad0d1c8.gif) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    font-family: 'Roboto', sans-serif;
     height: 100vh;
     width: 100%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #000;
-    background-color: #EEE;
-    display: grid;
-    place-items: center;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.relogio {
+    color: #FFF;
     font-size: 50px;
+}
+
+.calendario {
+    color: #FFF;
 }
