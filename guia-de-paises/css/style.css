@@ -11,17 +11,18 @@
 
 body {
     background-color: #CCC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .container {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
     background-color: #FFFFFF;
     padding: 3em;
     width: 80vw;
     max-width: 37em;
+    border: 1px solid red;
 }
 
 .campo-pesquisa {
@@ -58,4 +59,16 @@ body {
     width: 45%;
     min-width: 7.5em;
     margin: 1.8em auto 1.2em auto;
+}
+
+.container h2 {
+    font-weight: 600;
+    color: #222A43;
+    text-align: center;
+    margin-bottom: 1.8em;
+}
+
+.data-wrapper {
+    margin-bottom: 1em;
+    letter-spacing: 0.3px;
 }
