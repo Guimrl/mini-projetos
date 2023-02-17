@@ -70,7 +70,11 @@ h2 {
     margin-bottom: 1.8em;
 }
 
-.container h4 {
+h3 {
+    position: absolute;
+}
+
+h4 {
     display: inline-block;
     font-weight: 500;
     color: var(--cor-azul-escuro);
