@@ -56,10 +56,6 @@ body {
     cursor: pointer;
 }
 
-#resultado {
-    /* margin-top: 2em; */
-}
-
 .bandeira {
     display: block;
     width: 80%;
