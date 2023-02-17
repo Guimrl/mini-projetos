@@ -18,7 +18,7 @@ pesquisar.addEventListener("click", () => {
             <h4>Population:</h4>
             <span>${pais[0].population}</span><br>
             <h4>Currency:</h4>
-            <span>${pais[0].currencies[Object.keys(pais[0].currencies)].name} - ${Object.keys(pais[0].currencies)[0]} - ${pais[0].currencies[Object.keys(pais[0].currencies)].symbol}</span><br>
+            <span>${pais[0].currencies[Object.keys(pais[0].currencies)].symbol} ${pais[0].currencies[Object.keys(pais[0].currencies)].name}</span><br>
             
             <h4>languages:</h4>
             <span>${Object.values(pais[0].languages)
