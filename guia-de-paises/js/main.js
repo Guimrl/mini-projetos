@@ -1,11 +1,12 @@
 let pesquisar = document.getElementById("pesquisar");
 let input = document.getElementById("input-pais");
+const body = document.getElementsByTagName('body');
 
 pesquisar.addEventListener("click", () => {
     let nomePais = input.value;
     // let url = `https://restcountries.com/v3.1/name/${nomePais}?fullText=true`;
     let url =`https://restcountries.com/v3.1/translation/${nomePais}`;
-    console.log(url);
+    // console.log(url);
     fetch(url)
         .then((res) => res.json())
             .then((pais) => {
@@ -21,7 +22,7 @@ pesquisar.addEventListener("click", () => {
             // .toString()
             // .split(",")
             // .join(", "))
-
+            
             resultado.innerHTML = `
             <img src="${pais[0].flags.svg}" class="bandeira">
             `;
