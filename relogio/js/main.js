@@ -32,11 +32,17 @@ let relogio = () => {
     let dia = data.getDate();
     let mes = data.getMonth();
 
+    let check = document.getElementById("outroFormato").checked;
+    let newFormat = hrs >= 12 ? 'PM' : 'AM';
+    if (check) {
+        hrs = hrs % 12;
+    }
+
     hrs = hrs < 10 ? "0" + hrs : hrs;
     min = min < 10 ? "0" + min : min;
     sec = sec < 10 ? "0" + sec : sec;
 
-    let horario = `${hrs}:${min}:${sec}`;
+    let horario = check ? `${hrs}:${min} ${newFormat}` : `${hrs}:${min}:${sec}`;
     document.getElementById("relogio").innerText = horario;
     setTimeout(relogio, 1000);
     let diaDeHoje = `${diasDaSemana[hoje]}, ${dia} de ${mesesDoAno[mes]}`;
