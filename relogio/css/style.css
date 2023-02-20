@@ -58,7 +58,7 @@ input {
     background-color: #073453;
     border-radius: 50%;
     position: absolute;
-    top: 0.1em;
+    top: 0.071em;
     left: 0.09em;
     height: 1.375em;
     width: 1.375em;
@@ -68,5 +68,5 @@ input {
 }
 
 .checkbox:checked+.mode .ball {
-    transform: translateX(24px);
+    transform: translateX(23.5px);
 }
