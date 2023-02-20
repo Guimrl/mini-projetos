@@ -5,12 +5,14 @@
 }
 
 :root {
-    --cor-azul: #3D64E6;
-    --cor-azul-escuro: #222A43;
+    --cor-azul-escuro: #073453;
+    --cor-azul: #18a4e1;
+    --cor-fundo: #dff8eb;
+    --cor-branca: #ffffff;
 }
 
 body {
-    background-color: #CCC;
+    background-color: var(--cor-fundo);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +51,7 @@ body {
 .campo-pesquisa button {
     font-size: 1em;
     background-color: var(--cor-azul);
-    color: #FFF;
+    color: var(--cor-branca);
     padding: 0.8em 0;
     border-radius: 1.5em;
     border: none;
