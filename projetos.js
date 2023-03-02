@@ -50,6 +50,10 @@ const projetos = [
     {
         title: "Guia de Países",
         url: "guia-de-paises"
+    },
+    {
+        title: "apod - nasa api",
+        url: "apod"
     }
 
 ];
