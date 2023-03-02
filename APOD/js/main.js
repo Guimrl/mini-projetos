@@ -7,11 +7,11 @@ async function getApiData() {
     // console.log(res.explanation)
     const main = document.getElementById("main");
     main.innerHTML = `
-        <h1>${res.title}</h1>
-        <img alt="${res.title}" src="${res.url}">
-        <a href="${res.hdurl}">HD image</a>
-        <a type="image/jpg" href="${res.url}" title="${res.title}" download>download</a>
-        <p>${res.explanation}</p>
+        <h1 class="title">${res.title}</h1>
+        <img class="img" alt="${res.title}" src="${res.url}">
+        <a class="links" href="${res.hdurl}">HD image</a>
+        <a class="links" type="image/jpg" href="${res.url}" title="${res.title}" download>download</a>
+        <p class="p">${res.explanation}</p>
     `;
 }
 
