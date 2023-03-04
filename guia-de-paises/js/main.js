@@ -9,7 +9,9 @@ pesquisar.addEventListener("click", () => {
     .then((res) => res.json())
         .then((pais) => {
             resultado.innerHTML = `
-            <img src="${pais[0].flags.svg}" alt="${pais[0].flags.alt}" class="bandeira">
+            <a href="${pais[0].flags.svg}" target="a_blank">
+                <img src="${pais[0].flags.svg}" alt="${pais[0].flags.alt}" class="bandeira">
+            </a>
             <h2>${pais[0].name.common} (${pais[0].translations.por.common})</h2>
             <h4>Capital:</h4>
             <span>${pais[0].capital[0]}</span><br>

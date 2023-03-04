@@ -7,7 +7,7 @@
 :root {
     --cor-azul-escuro: #073453;
     --cor-azul: #18a4e1;
-    --cor-fundo: #dff8eb;
+    --cor-fundo: #f8f9fa;
     --cor-branca: #ffffff;
 }
 
@@ -16,6 +16,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .container {
