@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa Endereço</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <h3>Pesquisa Endereço</h3>
+    <div class="container">
+        <input type="text" class="form-control" placeholder="CEP" onblur="getDataAddressByCEP(this.value)" />
+        <input type="text" class="form-control" placeholder="Endereço" readonly id="endereco" />
+        <input type="text" class="form-control" placeholder="Bairro" readonly id="bairro" />
+        <input type="text" class="form-control" placeholder="Cidade" readonly id="cidade" />
+        <input type="text" class="form-control" placeholder="UF" readonly id="uf" />
+        <input type="text" class="form-control" placeholder="Cód. IBGE" readonly id="ibge" />
+    </div>
+</body>
+</html>
