@@ -9,8 +9,8 @@ async function getApiData() {
     main.innerHTML = `
         <h1 class="title">${res.title}</h1>
         <img class="img" alt="${res.title}" src="${res.url}">
-        <a class="links" href="${res.hdurl}">HD image</a>
-        <a class="links" type="image/jpg" href="${res.url}" title="${res.title}" download>download</a>
+        <button><a href="${res.hdurl}" target="a_blank">HD image</a></button>
+        <button><a type="image/jpg" href="${res.url}" title="${res.title}" download>download</a></button>
         <p class="p">${res.explanation}</p>
     `;
 }

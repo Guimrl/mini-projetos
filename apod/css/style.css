@@ -7,6 +7,7 @@
 
 body {
     width: 100%;
+    background-color: #28213E;
 }
 
 #main {
@@ -19,31 +20,43 @@ body {
 .title {
     font-weight: bold;
     padding: 40px;
+    color: #f8f9fa;
 }
 
 .img {
     max-width: 90%;
 }
 
-.links {
-    padding: 5px;
-    margin: 5px;
-    text-decoration: none;
-    background-color: #0df;
-    color: #000;
-    border-radius: 10px;
-    border: 2px solid #000;
+button {
+    border: 2px solid #0d6efd;
+    background-color: #0d6efd;
+    border-radius: 0.9em;
+    padding: 0.8em 1.2em 0.8em 1em;
+    transition: all ease-in-out 0.2s;
+    font-size: 16px;
+    color: #FFF;
+    font-weight: bold;
     cursor: pointer;
+    margin: 20px 5px;
 }
 
+button:hover {
+    background-color: #0071e2;
+}
 
-
+a,
+a:visited {
+    text-decoration: none;
+    color: #FFF;
+}
 
 .p {
+    padding: 25px 25px 25px 25px;
+    text-align: justify;
     text-indent: 40px;
-    text-justify: justify;
+    font-size: 1.1rem;
     margin: 0 auto 50px auto;
-    padding: 25px;
+    color: #868e96;
 }
 
 @media screen and (max-width:800px) {
