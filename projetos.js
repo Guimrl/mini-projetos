@@ -54,6 +54,14 @@ const projetos = [
     {
         title: "apod - nasa api",
         url: "apod"
-    }
+    },
+    {
+        title: "Pesquisa Endereço",
+        url: "pesquisa-endereco"
+    },
+    {
+        title: "Encurtador de link",
+        url: "encurtador-url"
+    },    
 
 ];
