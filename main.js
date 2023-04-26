@@ -1,14 +1,22 @@
-projetos.sort((a, b) => a.title.localeCompare(b.title));
 
-const urlPadrao = "https://guimrl.github.io/mini-projetos/";
 const section = document.querySelector('#conteudo');
 
-projetos.forEach(projeto => {
-    const tag = document.createElement("a");
-    tag.href = `${urlPadrao}${projeto.url}`;
-    tag.classList.add("btn");
-    tag.textContent = projeto.title;
-    tag.target = "_blank";
+async function getApi() {
+    const res = await fetch("https://api-mini-projetos.up.railway.app/projects")
+    const projects = await res.json();
+    projects.sort((a, b) => a.title.localeCompare(b.title));
 
-    section.insertAdjacentElement("beforeend", tag);
-});
+    projects.forEach(project => {
+        //console.log(project)
+        const tag = document.createElement("a");
+        tag.href = `${project.url}`;
+        tag.classList.add("btn");
+        tag.textContent = project.title;
+        tag.target = "_blank";
+
+        section.insertAdjacentElement("beforeend", tag);
+    });
+
+}
+
+getApi();
