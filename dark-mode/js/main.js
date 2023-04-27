@@ -20,9 +20,11 @@ input.addEventListener('change', () => {
     let getTheme;
     if (check) {
         getTheme = 'DARK';
+        input.checked = true;
         changeTheme(darkTheme);
     } else {
-        getTheme = 'LIGHT';
+        getTheme = 'LIGHT';        
+        input.checked = false;
         changeTheme(lightTheme);
     }
 
@@ -42,5 +44,9 @@ function changeProperty(property, value) {
 let getTheme = JSON.parse(localStorage.getItem("pageTheme"));
 
 if (getTheme === 'DARK') {
+    input.checked = true;
     changeTheme(darkTheme);
+} else {
+    input.checked = false;
+    changeTheme(lightTheme)
 }

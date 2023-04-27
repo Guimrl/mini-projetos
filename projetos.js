@@ -5,31 +5,31 @@ const projetos = [
     },
     {
         title: "Perfil Github",
-        url: "perfil-github/"
+        url: "https://guimrl.github.io/mini-projetos/perfil-github/"
     },
     {
         title: "Cronômetro",
-        url: "cronometro/"
+        url: "https://guimrl.github.io/mini-projetos/cronometro/"
     },
     {
         title: "Calculadora",
-        url: "calculadora/"
+        url: "https://guimrl.github.io/mini-projetos/calculadora/"
     },
     {
         title: "Mouse Tracker",
-        url: "mouse-tracker/"
+        url: "https://guimrl.github.io/mini-projetos/mouse-tracker/"
     },
     {
         title: "Bloco de Notas",
-        url: "bloco-de-notas/"
+        url: "https://guimrl.github.io/mini-projetos/bloco-de-notas/"
     },
     {
         title: "Lista de Tarefas",
-        url: "lista-de-tarefas/"
+        url: "https://guimrl.github.io/mini-projetos/lista-de-tarefas/"
     },
     {
         title: "Gerador QR Code",
-        url: "gerador-qrcode/"
+        url: "https://guimrl.github.io/mini-projetos/gerador-qrcode/"
     },
     {
         title: "Paint",
@@ -37,15 +37,15 @@ const projetos = [
     },
     {
         title: "Dark Mode",
-        url: "dark-mode/"
+        url: "https://guimrl.github.io/mini-projetos/dark-mode/"
     },
     {
         title: "Linktree",
-        url: "linktree/"
+        url: "https://guimrl.github.io/mini-projetos/linktree/"
     },
     {
         title: "Relógio",
-        url: "relogio/"
+        url: "https://guimrl.github.io/mini-projetos/relogio/"
     },
     {
         title: "Guia de Países",
@@ -53,15 +53,15 @@ const projetos = [
     },
     {
         title: "apod - nasa api",
-        url: "apod"
+        url: "https://guimrl.github.io/mini-projetos/apod"
     },
     {
         title: "Pesquisa Endereço",
-        url: "pesquisa-endereco"
+        url: "https://guimrl.github.io/mini-projetos/pesquisa-endereco"
     },
     {
         title: "Encurtador de link",
-        url: "encurtador-url"
+        url: "https://guimrl.github.io/mini-projetos/encurtador-url"
     },    
 
 ];
