@@ -1,6 +1,12 @@
+
 function getDataAddressByCEP(cep) {
     let url = `https://viacep.com.br/ws/${cep}/json/`;
     let xmlHttp = new XMLHttpRequest();
+    const endereco = document.getElementById('endereco');
+    const bairro = document.getElementById('bairro');
+    const cidade = document.getElementById('cidade');
+    const uf = document.getElementById('uf');
+    const ibge = document.getElementById('ibge');
 
     xmlHttp.open('GET', url);
 
@@ -9,11 +15,19 @@ function getDataAddressByCEP(cep) {
             let jsonDataTxt = xmlHttp.responseText;
             let res = JSON.parse(jsonDataTxt);
             // console.log(res)
-            document.getElementById('endereco').value = res.logradouro;
-            document.getElementById('bairro').value = res.bairro;
-            document.getElementById('cidade').value = res.localidade;
-            document.getElementById('uf').value = res.uf;
-            document.getElementById('ibge').value = res.ibge;
+            endereco.value = "";
+            bairro.value = "";
+            cidade.value = "";
+            uf.value = "";
+            ibge.value = "";
+
+            if (res.erro == undefined) {
+                endereco.value = res.logradouro;
+                bairro.value = res.bairro;
+                cidade.value = res.localidade;
+                uf.value = res.uf;
+                ibge.value = res.ibge;
+            }
         }
     }
     xmlHttp.send();
