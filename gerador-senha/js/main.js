@@ -1,34 +1,32 @@
 
 function generatePassword() {
-    let checkNum = document.querySelector("#numbers-yes");
-    let checkUpper = document.querySelector("#uppercase-yes");
-    let checkSpecial = document.querySelector("#specialcharacters-yes");
+    let content = document.querySelector("#content");
+    let numRadio = document.querySelector("#numbers-yes");
+    let upperRadio = document.querySelector("#uppercase-yes");
+    let specialRadio = document.querySelector("#specialcharacters-yes");
     let length = document.querySelector("#length").value;
     let chars = "abcdefghijklmnopqrstuvwxyz";
     let nums = "1234567890";
-    let specialChars = "!@#$%&*?";
+    let special = "!@#$%&*?";
     let password = "";
-    let num;
-    let upper;
+    let isNum;
+    let isUpper;
     let isEsp;
 
-    num = checkNum.checked ? true : false;
-    upper = checkUpper.checked ? true : false;
-    isEsp = checkSpecial.checked ? true : false;
+    isNum = numRadio.checked ? true : false;
+    isUpper = upperRadio.checked ? true : false;
+    isEsp = specialRadio.checked ? true : false;
 
-    if (upper === true) {
+    if (isUpper === true) {
         chars += chars.toUpperCase();
-        // console.log(`upper: ${chars}`)
     }
 
-    if (num === true) {
+    if (isNum === true) {
         chars += nums;
-        // console.log(`nums: ${chars}`)
     }
 
     if (isEsp === true) {
-        chars += specialChars;
-        // console.log(`Esp: ${chars}`)
+        chars += special;
     }
 
     for (let i = 0; i < length; i++) {
@@ -37,6 +35,10 @@ function generatePassword() {
     }
 
     console.log(`Senha gerada: ${password}`);
+    content.innerHTML = password;
 }
 
-window.addEventListener("submit", () => generatePassword());
+window.addEventListener("submit", (e) => {
+    e.preventDefault();
+    generatePassword();
+});

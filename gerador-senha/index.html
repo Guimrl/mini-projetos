@@ -11,7 +11,6 @@
 
 <body>
     <main>
-
         <h1>Gerador de Senhas</h1>
         <form>
             <fieldset>
@@ -35,15 +34,17 @@
                 <label for="uppercase-no">Não</label><br><br>
 
                 <label for="specialcharacters">Você deseja adicionar caracteres especiais na sua senha?</label><br>
-                
+
                 <input type="radio" id="specialcharacters-yes" name="specialcharacters" value="yes">
                 <label for="specialcharacters-yes">Sim</label>
 
                 <input type="radio" id="specialcharacters-no" name="specialcharacters" value="no" checked>
                 <label for="specialcharacters-no">Não</label><br><br>
 
-                <input type="submit" value="Gerar Senha">
+                <input type="submit" value="Gerar Senha" id="generate">
             </fieldset>
+
+            <div id="content"></div>
         </form>
     </main>
     <script src="./js/main.js"></script>
