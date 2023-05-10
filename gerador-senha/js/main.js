@@ -4,7 +4,7 @@ function generatePassword() {
     let checkUpper = document.querySelector("#uppercase-yes");
     let checkSpecial = document.querySelector("#specialcharacters-yes");
     let length = document.querySelector("#length").value;
-    let chars = "abcdefghijklmnopqrstuvxywz";
+    let chars = "abcdefghijklmnopqrstuvwxyz";
     let nums = "1234567890";
     let specialChars = "!@#$%&*?";
     let password = "";
@@ -12,37 +12,23 @@ function generatePassword() {
     let upper;
     let isEsp;
 
-    if (checkNum.checked === true) {
-        num = true;
-    } else {
-        num = false;
-    }
-
-    if (checkUpper.checked === true) {
-        upper = true;
-    } else {
-        upper = false;
-    }
-
-    if (checkSpecial.checked === true) {
-        isEsp = true;
-    } else {
-        isEsp = false
-    }
+    num = checkNum.checked ? true : false;
+    upper = checkUpper.checked ? true : false;
+    isEsp = checkSpecial.checked ? true : false;
 
     if (upper === true) {
         chars += chars.toUpperCase();
-        console.log(`upper: ${chars}`)
+        // console.log(`upper: ${chars}`)
     }
 
     if (num === true) {
         chars += nums;
-        console.log(`nums: ${chars}`)
+        // console.log(`nums: ${chars}`)
     }
 
     if (isEsp === true) {
         chars += specialChars;
-        console.log(`Esp: ${chars}`)
+        // console.log(`Esp: ${chars}`)
     }
 
     for (let i = 0; i < length; i++) {
@@ -53,4 +39,4 @@ function generatePassword() {
     console.log(`Senha gerada: ${password}`);
 }
 
-generatePassword();
+window.addEventListener("submit", () => generatePassword());
