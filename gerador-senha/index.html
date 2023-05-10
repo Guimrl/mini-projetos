@@ -11,6 +11,40 @@
 
 <body>
     <main>
+
+        <h1>Gerador de Senhas</h1>
+        <form>
+            <fieldset>
+                <label for="numbers">Você deseja incluir números em sua senha?</label><br>
+
+                <input type="radio" id="numbers-yes" name="numbers" value="yes">
+                <label for="numbers-yes">Sim</label>
+
+                <input type="radio" id="numbers-no" name="numbers" value="no" checked>
+                <label for="numbers-no">Não</label><br><br>
+
+                <label for="length">Qual o tamanho da sua senha?</label><br>
+                <input type="number" id="length" name="length" min="1" max="64" value="8" required><br><br>
+
+                <label for="uppercase">Você deseja adicionar letras maiúsculas na sua senha?</label><br>
+
+                <input type="radio" id="uppercase-yes" name="uppercase" value="yes">
+                <label for="uppercase-yes">Sim</label>
+
+                <input type="radio" id="uppercase-no" name="uppercase" value="no" checked>
+                <label for="uppercase-no">Não</label><br><br>
+
+                <label for="specialcharacters">Você deseja adicionar caracteres especiais na sua senha?</label><br>
+                
+                <input type="radio" id="specialcharacters-yes" name="specialcharacters" value="yes">
+                <label for="specialcharacters-yes">Sim</label>
+
+                <input type="radio" id="specialcharacters-no" name="specialcharacters" value="no" checked>
+                <label for="specialcharacters-no">Não</label><br><br>
+
+                <input type="submit" value="Gerar Senha">
+            </fieldset>
+        </form>
     </main>
     <script src="./js/main.js"></script>
 </body>
