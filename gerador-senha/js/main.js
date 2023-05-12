@@ -33,9 +33,14 @@ function generatePassword() {
         let random = Math.floor(Math.random() * chars.length);
         password += chars.substring(random, random + 1);
     }
+    // console.log(`Senha gerada: ${password}`);
 
-    console.log(`Senha gerada: ${password}`);
     content.innerHTML = password;
+    content.addEventListener("click", () => {
+        let inputSelect = document.querySelector("#content");
+        navigator.clipboard.writeText(inputSelect.textContent);
+        document.querySelector("small").innerHTML = "Senha copiada!";
+    })
 }
 
 window.addEventListener("submit", (e) => {
