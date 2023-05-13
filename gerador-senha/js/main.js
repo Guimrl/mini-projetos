@@ -46,4 +46,5 @@ function generatePassword() {
 window.addEventListener("submit", (e) => {
     e.preventDefault();
     generatePassword();
+    document.querySelector("small").innerHTML = "Clique sobre a senha para copiar";
 });
