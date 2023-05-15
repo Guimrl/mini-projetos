@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #EEEEEE;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#canvas {
+    margin-top: 10%;
+    border-radius: 15px;
+    border: 1px solid #000;
+    height: 250px;
+    width: 450px;
+    cursor: pointer;
+}
+
+#display {
+    margin: 15px;
+    cursor: pointer;
+}
+
+#display:hover {
+    transform: scale(1.2);
+}
+
+#btn {
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: large;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+small {
+    margin: 15px;
+}
