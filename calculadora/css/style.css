@@ -1,18 +1,19 @@
-* {
+/* css reset */
+body, h1, p, span {
     margin: 0;
-    padding: 0;
+    font-family: Montserrat;
 }
-
-html,
-body #fullheight {
-    min-height: 100% !important;
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
+body {
+    background-color: #373A46;
 }
-
-.container {
-    background-color: black;
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    color: #1F77FA;
+}
+/* calculator */
+#calculator {
+    background-color: #DBDDE0;
     width: 400px;
     height: 400px;
     margin-left: auto;
@@ -20,80 +21,65 @@ body #fullheight {
     padding-top: 30px;
     padding-bottom: 50px;
 }
-
-.result {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    color: white;
-    height: 39%;
+#screen-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 258px;
+    height: 70px;
+    border: 1px solid #354357;
+    text-align: right;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
 }
-
-.result span {
-    margin-right: 60px;
-    font-size: 30px;
-    justify-self: flex-end;
+#upper-number, #result-number {
+    float: right;
+    color: #1F77FA;
 }
-
+#result-number {
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 22px;
+    clear: both;
+}
+.btn-container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 15px;
+}
 .btn {
-    width: 100%;
-    height: 60%;
-    background-color: black;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-}
-
-.item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    color: white;
-    border-radius: 100%;
-    width: 80px;
-    height: 80px;
-    padding: 5px;
+    width: 50px;
+    height: 50px;
+    margin: 0 7.5px;
+    line-height: 50px;
+    text-align: center;
+    color: #1F77FA;
+    background-color: #BFC4CA;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
     cursor: pointer;
-    align-self: center;
-    justify-self: center;
 }
+.btn:hover {
+    background-color: #354357;
+}
+#ac-btn {
+    margin-left: -200px;
+}
+#division-btn {
+    position: absolute;
+    right: 14px;
+}
+#zero-btn, #equals-btn {
+    width: 120px;
+}
+#ac-btn, #division-btn, #multiplication-btn, #minus-btn, #equals-btn, #dot-btn, #zero-btn {
+    font-weight: 300;
+    font-size: 20px;
 
-.percent {
-    background-color: #A5A5A5;
-    border: none;
-    color: black;
-}
-
-.item1 {
-    background-color: #A5A5A5;
-    border: none;
-}
-
-.item3 {
-    background-color: #FF9F0A;
-}
-
-.num,
-.comma {
-    background-color: #343434;
-    border: none;
-}
-
-.negative,
-.clear {
-    color: black;
-}
-
-.itemZero {
-    background-color: #343434;
-    width: 160px;
-    border-radius: 135px;
-    grid-column: span 2;
-    border: none;
-}
-
-@media (max-width: 500px) {
-    .container {
-        width: 100%;
-    }
-}
+} 

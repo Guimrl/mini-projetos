@@ -4,39 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
-    <link rel="stylesheet" href="../calculadora/css/style.css">
+    <title>Calculadora JS Orientada a Objetos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="result">
-            <span>0</span>
+    <h1>Calculadora</h1>
+    <div id="calculator">
+        <div id="screen-container">
+            <div id="upper-number">0</div>
+            <div id="result-number">0</div>
         </div>
-
-        <div class="btn">
-            <button class="item item1 clear">AC</button>
-            <button class="item item1 negative" value="+/-">+/-</button>
-            <button class="item percent sign" value="%">%</button>
-            <button class="item item3 sign" value="/">/</button>
-            <button class="item num" value="7">7</button>
-            <button class="item num" value="8">8</button>
-            <button class="item num" value="9">9</button>
-            <button class="item item3 sign" value="x">x</button>
-            <button class="item num" value="4">4</button>
-            <button class="item num" value="5">5</button>
-            <button class="item num" value="6">6</button>
-            <button class="item item3 sign" value="-">-</button>
-            <button class="item num" value="1">1</button>
-            <button class="item num" value="2">2</button>
-            <button class="item num" value="3">3</button>
-            <button class="item item3 sign" value="+">+</button>
-            <button class="item itemZero num" value="0">0</button>
-            <button class="item comma">,</button>
-            <button class="item item3 equals">=</button>
+        <div id="buttons-container">
+            <div class="btn-container">
+                <div class="btn" id="ac-btn">AC</div>
+                <div class="btn" id="division-btn">/</div>
+            </div>
+            <div class="btn-container">
+                <div class="btn">7</div>
+                <div class="btn">8</div>
+                <div class="btn">9</div>
+                <div class="btn" id="multiplication-btn">x</div>
+            </div>
+            <div class="btn-container">
+                <div class="btn">4</div>
+                <div class="btn">5</div>
+                <div class="btn">6</div>
+                <div class="btn" id="minus-btn">-</div>
+            </div>
+            <div class="btn-container">
+                <div class="btn">1</div>
+                <div class="btn">2</div>
+                <div class="btn">3</div>
+                <div class="btn" id="plus-btn">+</div>
+            </div>
+            <div class="btn-container">
+                <div class="btn" id="zero-btn">0</div>
+                <div class="btn" id="equals-btn">=</div>
+            </div>
         </div>
     </div>
-
-    
-    <script src="../calculadora/js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,117 +1,141 @@
-const numbers = document.querySelectorAll('.num');
-const result = document.querySelector('.result span');
-const signs = document.querySelectorAll('.sign');
-const equals = document.querySelector('.equals');
-const clear = document.querySelector('.clear');
-const negative = document.querySelector('.negative');
-const percent = document.querySelector('.percent');
+class Calculator {
 
-let firstValue = "";
-let isFirstValue = false;
-let secondValue = "";
-let isSecondValue = false;
-let sign = "";
-let resultValue = 0;
+    constructor() {
+        this.upperValue = document.querySelector('#upper-number');
+        this.resultValue = document.querySelector('#result-number');
+        this.reset = 0;    
+    }
+    //clear all
+    clearValues() {
+        this.upperValue.textContent = '0';
+        this.resultValue.textContent = '0';
+    }
 
-for (let i = 0; i < numbers.length; i++) {
-    numbers[i].addEventListener('click', (e) => {
-        let atr = e.target.getAttribute('value');
-        if (isFirstValue === false) {
-            getFirstValue(atr);
+    checkLastDigit(input, upperValue, reg) {
+        if((!reg.test(input) && !reg.test(upperValue.substr(upperValue.length - 1)))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    //method sum
+    sum(n1, n2) {
+        return parseFloat(n1) + parseFloat(n2)
+    }
+    //method subtraction
+    subtraction(n1, n2) {
+        return parseFloat(n1) - parseFloat (n2)
+    }
+    //method multiplication
+    multiplication(n1, n2) {
+        return parseFloat(n1) * parseFloat (n2)
+    }
+    //method division
+    division(n1, n2) {
+        return parseFloat(n1) / parseFloat (n2)
+    }
+    //refresh values
+    refreshValues(total) {
+        this.upperValue.textContent = total;
+        this.resultValue.textContent = total;
+    }
+    //solve the operation
+    resolution() {
+        // explodes a string to array
+        let upperValueArray = (this.upperValue.textContent).split(" ");
+        //solve 
+        let result = 0;
+
+        for(let i = 0; i <= upperValueArray.length; i++) {
+
+            let operation = 0;
+            let actualItem = upperValueArray[i];
+
+            //multiplies
+            if(actualItem == "x") {
+                result = calc.multiplication(upperValueArray[i - 1], upperValueArray[i + 1]);
+                operation = 1;
+            //divide
+            } else if(actualItem == "/") {
+                result = calc.division(upperValueArray[i - 1], upperValueArray[i + 1]);
+                operation = 1;
+                //check if the array still has multiplication and division to be done
+            } else if(!upperValueArray.includes('x') && !upperValueArray.includes('/')) {
+                //sum and subtraction
+                if(actualItem == "+") {
+                    result = calc.sum(upperValueArray[i - 1], upperValueArray[i + 1]);
+                    operation = 1;
+                } else if(actualItem == "-") {
+                    result = calc.subtraction(upperValueArray[i - 1], upperValueArray[i + 1]);
+                    operation = 1;
+                }
+            }
+            //refresh array values to the next iteration
+            if(operation) {
+                //last index on result of op
+                upperValueArray[i - 1] = result;
+                //remove items already use for op
+                upperValueArray.splice(i, 2);
+                //refresh index value
+                i = 0;
+            }
         }
 
-        if (isSecondValue == false) {
-            getSecondValue(atr);
+        if(result) {
+            calc.reset = 1;
         }
-    })
-}
+        //refresh total
+        calc.refreshValues(result);
+    }
 
-function getFirstValue(el) {
-    result.innerHTML = "";
-    firstValue += el;
-    result.innerHTML = firstValue;
-    firstValue = +firstValue;
-}
+    btnPress() {
+        let input = this.textContent;
+        let upperValue = calc.upperValue.textContent;
+        //verify if has number only
+        var reg = new RegExp('^\\d+$');
 
-function getSecondValue(el) {
-    if (firstValue != "" && sign != "") {
-        secondValue += el;
-        result.innerHTML = secondValue;
-        secondValue = +secondValue;
+        //if need to reset, clear display
+        if(calc.reset && reg.test(input)) {
+            upperValue = '0';
+        }   
+        
+        //clear prop reset
+        calc.reset = 0;
+
+        //clear display
+        if(input == 'AC') {
+            calc.clearValues();
+
+        } else if(input == "=") {
+            calc.resolution();
+        } else {
+            //verify if need to add
+            if(calc.checkLastDigit(input, upperValue, reg)) {
+                return false;
+            }
+
+            //add space to op
+            if(!reg.test(input)) {
+                input = ` ${input} `; 
+            }
+            // upperValue == "0" && reg.test(input) ? calc.upperValue.textContent = input : calc.upperValue.textContent += input;
+            if(upperValue == "0") {
+                if(reg.test(input)) {
+                calc.upperValue.textContent = input;
+                }
+            } else {
+                calc.upperValue.textContent += input;
+            }
+        }
     }
 }
+//start obj
+let calc = new Calculator;
 
-function getSign() {
-    for (let i = 0; i < signs.length; i++) {
-        signs[i].addEventListener('click', (e) => {
-            sign = e.target.getAttribute('value');
-            isFirstValue = true;
-        })
-    }
+//start btns
+let buttons = document.querySelectorAll('.btn');
+
+//map all buttons
+for(let i = 0; buttons.length > i; i++) {
+    buttons[i].addEventListener('click', calc.btnPress);
 }
-getSign();
-equals.addEventListener('click', () => {
-    result.innerHTML = "";
-    if (sign === "+") {
-        resultValue = firstValue + secondValue;
-    } else if (sign === "-") {
-        resultValue = firstValue - secondValue;
-    } else if (sign === "x") {
-        resultValue = firstValue * secondValue;
-    } else if (sign === "/") {
-        resultValue = firstValue / secondValue;
-    }
-    result.innerHTML = resultValue;
-    firstValue = resultValue;
-    secondValue = "";
-
-    checkResultLength();
-})
-
-function checkResultLength() {
-    resultValue = JSON.stringify(resultValue);
-
-    if (resultValue.length >= 8) {
-        resultValue = JSON.parse(resultValue);
-        result.innerHTML = resultValue.toFixed(5);
-    }
-}
-
-negative.addEventListener('click', () => {
-    result.innerHTML = "";
-    if (firstValue != "") {
-        resultValue = -firstValue;
-        firstValue = resultValue;
-    }
-
-    if (firstValue != "" && secondValue != "" && sign != "") {
-        resultValue = -resultValue;
-    }
-
-    result.innerHTML = resultValue;
-})
-
-percent.addEventListener('click', () => {
-    result.innerHTML = "";
-    if (firstValue != "") {
-        resultValue = firstValue / 100;
-        firstValue = resultValue;
-    }
-
-    if (firstValue != "" && secondValue != "" && sign != "") {
-        resultValue = resultValue / 100;
-    }
-
-    result.innerHTML = resultValue;
-})
-
-clear.addEventListener('click', () => {
-    result.innerHTML = 0;
-
-    firstValue = "";
-    isFirstValue = false;
-    secondValue = "";
-    isSecondValue = false;
-    sign = "";
-    resultValue = 0;
-})
