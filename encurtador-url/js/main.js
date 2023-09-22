@@ -17,10 +17,13 @@ function encurtarUrl() {
     }).then(response => response.json())
         .then(json => {
             let inputUrl = document.getElementById("input");
+            if(json.code === "InvalidFormat") {
+               alert("insira uma url válida")
+               return
+            }
             inputUrl.value = json.shortUrl;
         }
         ).catch(e => console.error(e))
-
 }
 
 function copiar() {
