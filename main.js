@@ -1,7 +1,7 @@
 const section = document.querySelector('#conteudo');
 
-async function getApi(url) {
-    const res = await fetch(url);
+async function getApi() {
+    const res = await fetch("https://api-mini-projetos-guimrl.vercel.app/projects");
     const projects = await res.json();
     projects.sort((a, b) => a.title.localeCompare(b.title));
 
@@ -17,4 +17,4 @@ async function getApi(url) {
 
 }
 
-getApi(process.env.API_URL);
+getApi();
