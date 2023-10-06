@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "name": "mini-projetos",
+  "description": "Mini projetos para treinar HTML, CSS e JavaScript",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Guilherme Amaral",
+  "license": "ISC"
+}

@@ -1,12 +1,11 @@
 const section = document.querySelector('#conteudo');
 
-async function getApi() {
-    const res = await fetch("https://api-mini-projetos-guimrl.vercel.app/projects");
+async function getApi(url) {
+    const res = await fetch(url);
     const projects = await res.json();
     projects.sort((a, b) => a.title.localeCompare(b.title));
 
     projects.forEach(project => {
-        //console.log(project)
         const tag = document.createElement("a");
         tag.href = `${project.url}`;
         tag.classList.add("btn");
@@ -18,4 +17,4 @@ async function getApi() {
 
 }
 
-getApi();
+getApi(process.env.API_URL);
